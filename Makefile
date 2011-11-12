@@ -9,8 +9,8 @@ PDFLATEXFLAGS = -interaction=nonstopmode
 BIBTEXFLAGS =
 MPOSTFLAGS = -interaction=nonstopmode
 
-SRC-tex = haiku.tex
-SRC-bib = haiku.bib
+SRC-tex = haiku-2.tex
+SRC-bib = haiku-2.bib
 SRCS-mp = ${shell find figs -name '*.mp'}
 
 JOB-tex = ${SRC-tex:.tex=}
