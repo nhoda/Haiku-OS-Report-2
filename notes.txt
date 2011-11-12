@@ -1,1 +1,57 @@
 Major Package Versions:
+
+Stuff not in buildutils/haiku is here:
+http://www.haiku-files.org/files/releases/r1alpha3/sources/
+
+# Kernel
+  -> fork of NewOS kernel
+
+# libc (and other major libraries)
+  -> *gnu libc
+  -> *gnu libstdc++
+
+# X.org or other GUI foundation
+  -> no X11, own gui system
+
+# Major GUI toolkits (Gtk+, Qt, Motif, etc.)
+  -> none included in base install
+  -> haiku has its own gui toolkit, reimplimentation of beos api
+
+# shell (bash, csh, etc.)
+  -> *bash
+
+# utilities (ls, ps, busybox)
+  -> *gnu coreutils
+  -> *tar
+  -> *sed
+  -> *grep
+  -> *openssh
+  -> *p7zip
+  -> *make
+  -> *bzip2
+  
+# software packaging (rpm, dpkg, etc.)
+  -> package kit and pkgman, being developed for haiku
+
+# Web browser
+  -> WebPositive
+     -> *webkit based
+
+# email
+  -> mail writer based on open sourced BeMail
+
+# other packages that are key to system usage
+  -> Major GUI components
+     -> based on BeOS deskbar and tracker
+  
+  -> Build tools:
+     -> *perforce jam
+     -> *gcc, versions 2 and 4
+     -> *gnu binutils
+
+must report on:
+-version number
+-source (URL of original)
+-how old? how far behind latest stable release?
+-how heavily modified?
+-why chosen for standard install?
