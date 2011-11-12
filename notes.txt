@@ -1,0 +1,126 @@
+Website bibliographic entries:
+
+-author
+-link
+-page title
+-when accessed
+
+Background:
+* The name of the distribution
+** Haiku, originally named OpenBeOS (HaikuWiki)
+*** Haiku is a three line Japanese form of poetry, which appeared on
+    occasion in beos error messages (HaikuFaq)
+*** BeOS was a short lived proprietary OS written and distributed by
+    Be Inc. focusing on digital media work. (BeosWiki)
+**** had an object oriented C++ api (BeosWiki)
+**** had partial posix compatibility (BeosWiki)
+**** despite a devoted niche user base, could not achieve
+     profitability and was eventually acquired by Palm,
+     Inc. (BeosWiki)
+** renamed to Haiku upon receipt of notice of infringement from Palm,
+   Inc. (HaikuWiki)
+
+* its heritage (what other OS distribution(s) is it derived from
+** takes its inspiration from beos (HaikuAbout)
+*** aims to recreate both BeOS technologies and end user experience
+    (HaikuFaq)
+**** user experience
+***** uses same window docoration style and colour as beos (HaikuWiki)
+      (BeosWiki)
+***** includes core beos user interface elements, Tracker and Deskbar,
+      which were open sourced by Be Inc. in 2001 (HaikuFaq)
+****** Tracker is the beos file manager (HaikuFaq)
+****** Deskbar, the beos taskbar (HaikuFaq)
+***** "core qualities" of "elegance" and "simplicity" of beos
+      (HaikuFaq)
+***** a unified, cohesive user interface (HaikuAbout) (HaikuHIG)
+      (HaikuIcon)
+**** technologies
+***** object oriented C++ beos api (HaikuWiki)
+***** OpenBFS (BFSWiki)
+
+* its goals and target audience
+** targets personal computing (HaikuAbout)
+*** with a fully integrated GUI environment as a opposed to a stacked
+    system (HaikuFaq)
+*** focused on single user at the moment, though with plans for
+    multi-user support in the future (HaikuFuture)
+*** unified human interface (HaikuHIG) (HaikuIcon)
+** development is focused on x86-32 hardware platform, though ports to
+   other platforms are being developed (HaikuFaq)
+** aims for full source and binary compatiblity with x86 version of
+   beos (HaikuWiki)
+*** already many BeOS R5 application binaries run successfully on Haiku
+**** Opera, Firefox, Quake III (HaikuWiki)
+*** implementation of beos object-oriented software development APIs
+    (HaikuWiki)
+** posix compatibility (HaikuIncContracts) (HaikuFuture)
+** package management system is in development (HaikuR1A3Notes)
+** ports collection is in development (HaikuPorts)
+*** would allow the easy installation of much open source software
+    (HaikuPorts)
+
+* who develops it
+** development is centered around haiku project
+*** international community of volunteer developers (HaikuAbout)
+**** 81 developers with commit access to the repository, with the top
+     contributors ranking in the thousands of commits over several
+     years (HaikuContrib)
+*** communicating via online forums, mailing lists and IRC channels
+    (HaikuComm)
+*** google summer of code
+**** Haiku project has participated in GSOC every year since 2007
+     (HaikuGSOC)
+**** took contributions from seven students in 2010 (HaikuGSOC2010)
+*** development contracts (HaikuIncContracts)
+**** allow contributors to focus large blocks of time to Haiku
+     development (HaikuIncContracts)
+**** contract lengths up to six months (HaikuLongContract)
+*** managed by SVN repository and Trac bug reporting tool (HaikuDevStart)
+**** write access to the SVN repository being granted on the basis of
+     past contributions (HaikuDevStart)
+*** supported by Haiku, Inc. (HaikuIncAbout)
+**** 501(c)(3) non-profit organization (HaikuIncAbout)
+**** founded in 2003 by Michael Phipps (HaikuInc)
+**** founded in New York State's Division of Corporations (HaikuInc)
+**** with a 2011 operating budget of $25,500 (HaikuIncDocs)
+**** funded almost entirely through donations (HaikuIncDocs)
+***** almost entirely from private individuals
+****** directly to Haiku, Inc. (HaikuIncDonors)
+****** through haikuware bounties and thank you awards (HaikuWareBounties)
+******* haikuware is a repository of pre-built software for Haiku as
+        well as a hub for Haiku end-users (HaikuWareAbout)
+
+* how it may be obtained
+** haiku release 1 alpha 3 published june 20, 2011 (HaikuRelease)
+*** available for free download from variousn FTP and HTTP mirrors (HaikuGet)
+**** formats: anyboot, iso and vmdk (HaikuGet)
+***** all formats may be used live or to install Haiku to a disk volume
+***** anyboot images may be written to and booted from USB flash
+      drives, hard disk drives or CD/DVD media (HaikuGet)
+***** ISOs be written to CDs
+***** VMDK is an open virtual machine disk format which can be opened
+      by VMWare products as well as QEMU, and VirtualBox (VMDKWiki)
+*** available for order on CD from Haiku, Inc. for a minimum donation
+    of $10 per disc (HaikuOrder)
+*** nightly snapshots available from ...
+
+* its approximate size
+** r1alpha3 release images
+*** ~250MB anyboot compressed (HaikuGet)
+*** ~700MB anyboot uncompressed
+*** ~700MB installed system
+**** +2GB default swap file size
+** r1alpha3 source code
+*** build tools
+**** consisting almost entirely of customized 3rd party software
+     (HaikuR1A3Src)
+**** only required for building Haiku from a non-BeOS-compatible OS
+     (HaikuGetSvn)
+**** ~60MB compressed (HaikuR1A3Src)
+**** ~530MB uncompressed
+*** system source
+**** ~70MB compressed (HaikuR1A3Src)
+**** ~530MB uncompressed
+**** ~5.5 million lines of C/C++ code and headers, not including blank
+     or comment lines, according to cloc (Cloc)
