@@ -21,3 +21,7 @@ http://www.haiku-os.org/tags/syslog_daemon
 -mail_daemon
 -cddb_daemon
 -notification_server
+
+-tracker
+
+-deskbar
