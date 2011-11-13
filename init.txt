@@ -9,17 +9,23 @@ http://www.birdhouse.org/beos/byte/17-filetyping/
 -net_server
 
 -app_server
+https://www.haiku-os.org/documents/dev/windows_and_views_in_the_haiku_app_server
+"At the heart, it manages multiple applications simultaneously using the display device as a shared resource."
 
 -syslog_daemon
 http://www.haiku-os.org/tags/syslog_daemon
 
 -mount_server
+http://cgit.haiku-os.org/haiku/tree/src/servers/mount/AutoMounter.cpp
+A service that listens for system messages indicating new media has been detected and automatically mounts associated filesystems.
 
 -tracker
 http://haiku-os.org/docs/userguide/en/tracker.html
+An application that provides one-stop access to file system exploration. Clicking the "Tracker" button brings up a list of all open windows currently viewing any mounted file systems.
 
 -deskbar
 http://haiku-os.org/docs/userguide/en/deskbar.html
+Similar to the Windows task bar, its "Start" bar is instead a button with the Haiku feather. It behaves exactly as one would expect, bringing up menus that provide access to applications, shutdown/sleep functionality, recent documents, system preferences, and more.
 
 -media_server
 
