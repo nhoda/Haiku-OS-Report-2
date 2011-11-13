@@ -15,6 +15,12 @@ http://www.haiku-os.org/tags/syslog_daemon
 
 -mount_server
 
+-tracker
+http://haiku-os.org/docs/userguide/en/tracker.html
+
+-deskbar
+http://haiku-os.org/docs/userguide/en/deskbar.html
+
 -media_server
 
 -midi_server
@@ -28,6 +34,4 @@ http://haiku-os.org/docs/userguide/en/preferences/e-mail.html
 
 -notification_server
 
--tracker
-
--deskbar
+- ~/config/boot/UserBootscript used
