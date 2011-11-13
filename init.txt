@@ -6,7 +6,6 @@ http://www.birdhouse.org/beos/byte/17-filetyping/
 
 -debug_server
 
-
 -net_server
 
 -app_server
@@ -15,11 +14,18 @@ http://www.birdhouse.org/beos/byte/17-filetyping/
 http://www.haiku-os.org/tags/syslog_daemon
 
 -mount_server
+
 -media_server
+
 -midi_server
+
 -print_server
+
 -mail_daemon
+http://haiku-os.org/docs/userguide/en/preferences/e-mail.html
+
 -cddb_daemon
+
 -notification_server
 
 -tracker
