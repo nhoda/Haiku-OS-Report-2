@@ -10,6 +10,10 @@
 \usepackage{subfig}
 \usepackage{booktabs}
 
+\newcommand{\toprul}{\toprule[1.2pt]}
+\newcommand{\tmidrul}{\midrule[1.2pt]}
+\newcommand{\bottomrul}{\bottomrule[1.2pt]}
+
 % Page setup
 % Shamelessly stolen from Pat Morin's Open Data Structures
 \setlength{\textheight}{8.5in}
@@ -69,9 +73,9 @@ The following table summarizes information about the packages we'll be
 discussing in this section.
 
 \begin{tabular}{l l l l}
-\toprule
+\toprul
 Package & Fork & Version & Stable Version \\
-\midrule
+\tmidrul
 NewOS Kernel & Fork & ~2002 (no releases) & 20050620 (last snapshot) \\
 \midrule
 GNU libc & Yes & ~2.2.5-2.3.5 (2005) & 2.14.1 (2011-10-07) \\
@@ -101,7 +105,7 @@ Perforce Jam & Yes & 2.5 (2003-04) & 2.5 (2003-04) \\
 gcc2 & Yes & 2.95.3 (2001-03-16) & 4.6.2 (2011-10-26) \\
 \midrule
 gcc4 & Yes & 4.4.4 (2010-04-29) & 4.6.2 (2011-10-26) \\
-\bottomrule
+\bottomrul
 \end{tabular}
 
 \section{Initialization}
