@@ -91,18 +91,17 @@ version:
 http://en.wikipedia.org/wiki/GNU_C_Library
 
 -initial import not visible in haiku repository, but subsequent
- commits indicated importing various files from the 2.3.x glibc
- releases
+ commits indicated importing various files from the 2.2.x and 2.3.x
+ glibc releases
 
 http://cgit.haiku-os.org/haiku/log/src/system/libroot/posix/glibc
 
 source:
 how old? how far behind latest stable release?
-
 -well, the initial import is about a decade old but that may be
  deceptive but the commit logs indicated that some files from more
  recent releases have been imported along the way.
-
+-latest stable release: 2.14
 how heavily modified?
 -quite heavily modified
 -not tracking the upstream source
@@ -206,8 +205,8 @@ openssh:
 version: 5.8p2
 source: http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-5.8p2.tar.gz
 how old? how far behind latest stable release?
--5.8 released on February 4, 2011
--5.9 (latest) released on September 6, 2011
+-5.8p2 released on May 2nd, 2011
+-5.9p1 (latest) released on September 6, 2011
 how heavily modified?
 -barely modified
 -patch mostly just changes some c preprocessor defines for file and
