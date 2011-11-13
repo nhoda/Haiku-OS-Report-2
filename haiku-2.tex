@@ -56,7 +56,7 @@ The goal for Haiku as far as software availability and installation is ultimatel
 
 \section{Initialization}
 
-Haiku initializes itself through a Bash shell script called \texttt{Bootscript}. The kernel calls upon this script directly when initializing applications and services when Haiku starts. \texttt{Bootscript} also calls upon a \texttt{SetupEnvironment} script that initializes important environment variables. Several applications and services are started when Haiku is initialized. Some of the important ones, in the order they are initialized, include:
+Haiku initializes itself through a Bash shell script called \texttt{Bootscript}, which the kernel calls upon directly to initialize applications and services when Haiku starts. \texttt{Bootscript} also calls upon a \texttt{SetupEnvironment} script that initializes important environment variables. Below is a short list of just a few of the applications and services that start when Haiku is initialized, in order of initialization.
 
 \textbf{app\_server:}
 ``At the heart, it manages multiple applications simultaneously using the display device as a shared resource.''\cite{AppServer}
