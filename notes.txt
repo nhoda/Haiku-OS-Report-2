@@ -85,7 +85,6 @@ why chosen for standard install?
 libc:
 -----
 version:
-
 -hard to say, not a package per se but forked into the haiku
  repository as part of Haiku "libroot"
 
@@ -165,25 +164,29 @@ why chosen?
 
 tar:
 ----
-version:
-source:
+version: 1.25
+source: http://ftp.gnu.org/gnu/tar/tar-1.25.tar.bz2
 how old? how far behind latest stable release?
-
+-1.25 released November 7th, 2010
+-1.26, latest release, from March 13th, 2011
 how heavily modified?
-
+-not at all
 why chosen?
+-standard unix archiver
+-at the very least needed for the ports system to unpackage software
+ sources
 
 
 sed:
 ----
-version:
-source:
+version: 4.2.1
+source: http://ftp.gnu.org/gnu/sed/sed-4.2.1.tar.gz
 how old? how far behind latest stable release?
-
+-this is the latest release, released on June 27th, 2009
 how heavily modified?
-
+-barely at all, just added a line to include #stdbool.h somewhere
 why chosen?
-
+-another basic unix command-line tool needed for scripts and whatnot
 
 grep:
 -----
@@ -200,47 +203,55 @@ why chosen?
 
 openssh:
 --------
-version:
-source:
+version: 5.8p2
+source: http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-5.8p2.tar.gz
 how old? how far behind latest stable release?
-
+-5.8 released on February 4, 2011
+-5.9 (latest) released on September 6, 2011
 how heavily modified?
-
+-barely modified
+-patch mostly just changes some c preprocessor defines for file and
+ directory paths
 why chosen?
-
+-ssh is a basic necessity for a useful command-line
 
 p7zip:
 ------
-version:
-source:
+version: 9.13
+source: http://downloads.sourceforge.net/project/p7zip/p7zip/9.13/p7zip_9.13_src_all.tar.bz2
 how old? how far behind latest stable release?
-
+-9.13 released on May 30th, 2010
+-9.20.1 latest released on March 16th, 2011
 how heavily modified?
-
+-barely
+-bulk of patch changes simply modify the installation scripts or makefile
+-the few other changes just add a HAIKU ifdef next to a BEOS ifdef
 why chosen?
-
+-p7 can decompress most archive formats, including proprietary ones
+ like rar
 
 make:
 -----
-version:
-source:
+version: 3.82
+source: http://ftp.gnu.org/pub/gnu/make/make-3.82.tar.bz2
 how old? how far behind latest stable release?
-
+-this is the latest release from July 28th, 2010
 how heavily modified?
-
+-barely, just an ifdef
 why chosen?
-
+-needed for the ports system
 
 bzip2:
 ------
-version:
-source:
+version: 1.0.6
+source: http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
 how old? how far behind latest stable release?
-
+-this is the latest release from September 20th, 2010
 how heavily modified?
-
+-barely: only change is to the makefile to change the installation
+ rules
 why chosen?
-
+-needed to unpack port sources for the port system
 
 webpositive and webkit:
 -----------------------
@@ -261,14 +272,19 @@ why chosen?
 
 jam:
 ----
-version:
-source:
+version: 2.5
+source: ftp://ftp.perforce.com/jam/src
 how old? how far behind latest stable release?
-
+-this is the latest release, put out April, 2003
+http://www.perforce.com/documentation/jam
 how heavily modified?
-
+-very heavily modified
+-include a source header and file metatdata caching enhancement to
+ improve build performance of the large beos source tree
+-additionally, diff between original source files ~5000 lines
 why chosen?
-
+-it's an integral part of the haiku build system so needed for
+ self-hosting
 
 gcc2:
 -----
@@ -293,7 +309,7 @@ how old? how far behind latest stable release?
 -4.4.4 was released on April 29th, 2010
 -latest stable release: 4.6.2, October 26th, 2011
 how heavily modified?
-
+-hardly modified at all, only 1678 line diff
 why chosen?
 -obviously need a compiler to make haiku self-hosting and for building
  ports
