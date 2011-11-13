@@ -25,6 +25,7 @@ http://www.haiku-files.org/files/releases/r1alpha3/sources/
 # Major GUI toolkits (Gtk+, Qt, Motif, etc.)
   -> none included in base install
   -> haiku has its own gui toolkit, reimplimentation of beos api
+  -> a qt port is being worked on http://qt-haiku.ru/
 
 # shell (bash, csh, etc.)
   -> *bash
@@ -41,6 +42,7 @@ http://www.haiku-files.org/files/releases/r1alpha3/sources/
   
 # software packaging (rpm, dpkg, etc.)
   -> package kit and pkgman, being developed for haiku
+     -> not yet in alpha release
 
 # Web browser
   -> WebPositive
@@ -56,7 +58,6 @@ http://www.haiku-files.org/files/releases/r1alpha3/sources/
   -> Build tools:
      -> *perforce jam
      -> *gcc, versions 2 and 4
-     -> *gnu binutils
 
 
 NewOS kernel:
@@ -139,13 +140,27 @@ why chosen?
 
 coreutils:
 ----------
-version:
-source:
+version: 8.4
+source: http://ftp.gnu.org/gnu/coreutils/
 how old? how far behind latest stable release?
+Coreutils 8.4 was released January 13th, 2010 and the latest version
+8.14 was released October 12th, 2011.
 
 how heavily modified?
 
+Of the new files added in the coreutils directory in the Haiku
+sources, almost all were automatically generated, most likely during
+the coreutils build process.  Changes to files in the Haiku sources
+were limited to just 206 added or removed lines.  Among these changes,
+the only significant modification has to do with adding support for
+the copying of file metadata (attributes) which are a special feature
+of the BeFS.
+
+http://haiku-os.org/docs/userguide/en/attributes.html
+
 why chosen?
+-were chosen to support the command-line environment, including such
+ basic commands as cat, cp, echo, ls, mv, mkdir, true, etc.
 
 
 tar:
@@ -172,14 +187,16 @@ why chosen?
 
 grep:
 -----
-version:
+version: 2.5.1
 source:
 how old? how far behind latest stable release?
-
+-Included version is from March 26th, 2002.  Latest release grep-2.9
+ was put out June 21st, 2011.
 how heavily modified?
-
+-Source code diff shows it's virtually unchanged, mostly just a few
+ ifdef's added for HAIKU.
 why chosen?
-
+-needed for a decent command-line interface
 
 openssh:
 --------
@@ -225,49 +242,22 @@ how heavily modified?
 why chosen?
 
 
-pkgman and package kit:
------------------------
-version:
-source:
-how old? how far behind latest stable release?
-
-how heavily modified?
-
-why chosen?
-
-
 webpositive and webkit:
 -----------------------
-version:
-source:
+version: Taken from WebKit repo: r57734
+source: 
+svn checkout http://svn.webkit.org/repository/webkit/trunk@r57734 WebKit
 how old? how far behind latest stable release?
-
+-That revision dates to April 9th, 2010, which is about a year and a
+ half older than the latest nightly build (webkit doesn't do
+ releases).
+-The latest revision number on the repo is past 100000.
 how heavily modified?
-
+-appears to be quite heavily modified, produces a >25000 line diff
 why chosen?
-
-
-mail:
------
-version:
-source:
-how old? how far behind latest stable release?
-
-how heavily modified?
-
-why chosen?
-
-
-deskbar and tracker:
---------------------
-version:
-source:
-how old? how far behind latest stable release?
-
-how heavily modified?
-
-why chosen?
-
+-needed to replace aging bezillabrowser which was firefox2 based
+ http://en.wikipedia.org/wiki/WebPositive
+-webkit backed by apple (safari) and google (chrome)
 
 jam:
 ----
@@ -280,47 +270,32 @@ how heavily modified?
 why chosen?
 
 
-gcc2 and gcc4:
---------------
-version:
-source:
-how old? how far behind latest stable release?
-
-how heavily modified?
-
-why chosen?
-
-
-binutils:
----------
-version:
-source:
-how old? how far behind latest stable release?
-
-how heavily modified?
-
-why chosen?
-
-
-bash:
+gcc2:
 -----
-version:
-source:
+version: 2.95.3
+source: ftp://ftp.gnu.org/gnu/gcc/gcc-2.95.3/
 how old? how far behind latest stable release?
-
+-2.95.3 was released on March 16th, 2001
+-latest stable release: 4.6.2, October 26th, 2011
 how heavily modified?
-
+-produces a 45,000 line diff from the source
 why chosen?
+-obviously need a compiler to make haiku self-hosting and for building
+ ports
+-for backwards compatibility with BeOS R5, the gcc2 C++ ABI is used to
+ build Haiku libraries
 
-
-bash:
+gcc4:
 -----
-version:
-source:
+version: 4.4.4
+source: ftp://ftp.gnu.org/gnu/gcc/gcc-4.4.4/
 how old? how far behind latest stable release?
-
+-4.4.4 was released on April 29th, 2010
+-latest stable release: 4.6.2, October 26th, 2011
 how heavily modified?
 
 why chosen?
-
+-obviously need a compiler to make haiku self-hosting and for building
+ ports
+-faster than gcc2 and produces more optimized code
 
