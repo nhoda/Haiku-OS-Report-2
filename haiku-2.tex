@@ -8,6 +8,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{booktabs}
 
 % Page setup
 % Shamelessly stolen from Pat Morin's Open Data Structures
@@ -53,6 +54,55 @@ Unfortunately in many cases, the only way to remove software on Haiku is to manu
 The goal for Haiku as far as software availability and installation is ultimately to have a proper package management system akin to that available with popular Linux distributions.\cite{HaikuFuturePkgMan} According to one of the developers responsible for developing a solution to package management for Haiku, \textit{HaikuPorter} will still play a very large role in the future. Haiku package files (.HPKG) will essentially work to resolve dependencies before invoking \textit{HaikuPorter} to complete the build and installation process.\cite{TappeOnPackages}
 
 \section{Major Package Versions}
+
+Third party packages included the Haiku base via two main mechanisms:
+as forks from the upstream version and as ports using the haiku ports
+framework
+XXX \url{http://www.haiku-files.org/files/releases/r1alpha3/sources/}.
+The forks themselves fall into two categories, those tracking an
+upstream version, and those maintained by Haiku developers more or
+less independently.  In some cases the package is maintained
+independently but bits and pieces of newer versions of the package
+have been merged in on a piecemeal basis.
+
+The following table summarizes information about the packages we'll be
+discussing in this section.
+
+\begin{tabular}{l l l l}
+\toprule
+Package & Fork & Version & Stable Version \\
+\midrule
+NewOS Kernel & Fork & ~2002 (no releases) & 20050620 (last snapshot) \\
+\midrule
+GNU libc & Yes & ~2.2.5-2.3.5 (2005) & 2.14.1 (2011-10-07) \\
+\midrule
+GNU bash & Yes & 4.0.35 (2009-10-24) & 4.2.10 (2011-05-03) \\
+\midrule
+GNU coreutils & Yes & 8.4 (2010-01-13) & 8.14 (2011-10-12) \\
+\midrule
+GNU tar & No & 1.25 (2010-11-07) & 1.26 (2011-03-13) \\
+\midrule
+GNU sed & No & 4.2.1 (2009-06-27) & 4.2.1 (2009-06-27) \\
+\midrule
+GNU grep & Yes & 2.5.1 (2002-03-26) & 2.9 (2011-06-21) \\
+\midrule
+OpenSSH & No & 5.8p2 (2011-05-02) & 5.9p1 (2011-09-06) \\
+\midrule
+p7zip & No & 9.13 (2010-05-30) & 9.20.1 (2011-03-16) \\
+\midrule
+GNU make & No & 3.82 (2010-07-28) & 3.82 (2010-07-28) \\
+\midrule
+bzip2 & No & 1.0.6 (2010-09-20) & 1.0.6 (2010-09-20) \\
+\midrule
+WebKit & Yes & r57734 (2010-04-09) & r100096 (2011-11-13) \\
+\midrule
+Perforce Jam & Yes & 2.5 (2003-04) & 2.5 (2003-04) \\
+\midrule
+gcc2 & Yes &  &  \\
+\midrule
+gcc4 & Yes &  &  \\
+\bottomrule
+\end{tabular}
 
 \section{Initialization}
 
