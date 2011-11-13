@@ -1,0 +1,23 @@
+Server started by the Bootscript:
+
+-registrar
+http://www.birdhouse.org/beos/bible/exc_filetype.html
+http://www.birdhouse.org/beos/byte/17-filetyping/
+
+-debug_server
+
+
+-net_server
+
+-app_server
+
+-syslog_daemon
+http://www.haiku-os.org/tags/syslog_daemon
+
+-mount_server
+-media_server
+-midi_server
+-print_server
+-mail_daemon
+-cddb_daemon
+-notification_server
