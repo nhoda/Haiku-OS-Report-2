@@ -65,10 +65,10 @@ Haiku initializes itself through a Bash shell script called \texttt{Bootscript}.
 A service that listens for system messages indicating new media has been detected and automatically mounts associated filesystems.\cite{AutoMounter}
 
 \textbf{Tracker:}
-An application that provides one-stop access to file system exploration. Clicking the ``Tracker'' button brings up a list of all open windows currently viewing any mounted file systems.\cite{Tracker}
+An application that provides one-stop access to file system exploration. Clicking the \textit{Tracker} button brings up a list of all open windows currently viewing any mounted file systems.\cite{Tracker}
 
 \textbf{Deskbar:}
-Similar to the Windows task bar, its ``Start'' bar is instead a button with the Haiku feather. It behaves exactly as one would expect, bringing up menus that provide access to applications, shutdown/sleep functionality, recent documents, system preferences, and more.\cite{Deskbar}
+Similar to the Windows task bar, its \textit{Start} bar is instead a button with the Haiku feather. It behaves exactly as one would expect, bringing up menus that provide access to applications, shutdown/sleep functionality, recent documents, system preferences, and more.\cite{Deskbar}
 
 This was all discovered through a fortunate accident, finding the \texttt{Bootscript} in its logical location, \texttt{/boot/system/boot/}. Several scripts are found in this directory, and a \texttt{more} on Bootscript revealed its importance in Haiku's boot process. A \texttt{grep} on the kernel source files confirmed that \texttt{Bootscript} was indeed solely responsible for the order of application and service initialization in Haiku.
 
