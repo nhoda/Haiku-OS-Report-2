@@ -1,3 +1,13 @@
+must report on:
+-version number
+-source (URL of original)
+-how old? how far behind latest stable release?
+-how heavily modified?
+-why chosen for standard install?
+
+Haiku Sources:
+http://www.haiku-files.org/files/releases/r1alpha3/sources/
+
 Major Package Versions:
 
 Stuff not in buildutils/haiku is here:
@@ -8,7 +18,6 @@ http://www.haiku-files.org/files/releases/r1alpha3/sources/
 
 # libc (and other major libraries)
   -> *gnu libc
-  -> *gnu libstdc++
 
 # X.org or other GUI foundation
   -> no X11, own gui system
@@ -49,9 +58,269 @@ http://www.haiku-files.org/files/releases/r1alpha3/sources/
      -> *gcc, versions 2 and 4
      -> *gnu binutils
 
-must report on:
--version number
--source (URL of original)
--how old? how far behind latest stable release?
--how heavily modified?
--why chosen for standard install?
+
+NewOS kernel:
+-------------
+version:
+-Forked from NewOS probably sometime in 2002.  Unclear when exactly.
+-No NewOS version numbers, released as snapshots.
+
+source (URL of original):
+-Probably one of these: http://newos.org/snapshots/2002/
+
+how old? how far behind latest stable release?
+-Last NewOS snapshots were put out in 2005:
+ http://newos.org/snapshots/
+-So Haiku is ~3 years "behind" though the kernel was basically forked
+ so not really.
+
+how heavily modified?
+-Very heavily modified.  Greping for copyrights of file headers
+ gives..
+
+why chosen for standard install?
+-they needed a kernel and this one was out there
+
+libc:
+-----
+version:
+
+-hard to say, not a package per se but forked into the haiku
+ repository as part of Haiku "libroot"
+
+http://en.wikipedia.org/wiki/GNU_C_Library
+
+-initial import not visible in haiku repository, but subsequent
+ commits indicated importing various files from the 2.3.x glibc
+ releases
+
+http://cgit.haiku-os.org/haiku/log/src/system/libroot/posix/glibc
+
+source:
+how old? how far behind latest stable release?
+
+-well, the initial import is about a decade old but that may be
+ deceptive but the commit logs indicated that some files from more
+ recent releases have been imported along the way.
+
+how heavily modified?
+-quite heavily modified
+-not tracking the upstream source
+-replacing various functions from other sources entirely
+
+http://cgit.haiku-os.org/haiku/log/src/system/libroot/posix/glibc
+
+why chosen?
+-in order to fulfil Haiku's goal of BeOS API compatibility, including
+ c library functions in its libroot was a necessity
+-using gnu libc as opposed to a bsd libc might have just been because
+ beos used gnu libc in its libroot
+
+
+bash:
+-----
+version: 4.0.35
+source: ftp://ftp.gnu.org/gnu/bash/
+how old? how far behind latest stable release?
+-Patch 35 for bash 4.0 was released on October 24th, 2009
+-less than two years older than the latest patch 10 for bash 4.2, put
+ out on May 3rd, 2011.
+
+how heavily modified?
+
+A recursive unified diff between the stock bash 4.0.35 and the one in
+the haiku r1alpha3 sources produced 87 lines additions and 38 line
+deletions.  Most of these changes appear to have to do with porting
+the shell rather than modifying it.
+
+why chosen?
+-BeOS had a bash shell so it was necessary for Haiku to have one as
+ well.
+
+coreutils:
+----------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+tar:
+----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+sed:
+----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+grep:
+-----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+openssh:
+--------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+p7zip:
+------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+make:
+-----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+bzip2:
+------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+pkgman and package kit:
+-----------------------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+webpositive and webkit:
+-----------------------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+mail:
+-----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+deskbar and tracker:
+--------------------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+jam:
+----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+gcc2 and gcc4:
+--------------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+binutils:
+---------
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+bash:
+-----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
+bash:
+-----
+version:
+source:
+how old? how far behind latest stable release?
+
+how heavily modified?
+
+why chosen?
+
+
