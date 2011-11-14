@@ -175,7 +175,17 @@ relatively few changes, most of which appear to have more to do with
 porting the shell than with modifying it (i.e. preprocessor defines).
 
 \paragraph{Utilities}
-XXX
+In order to support the command-line environment, Haiku includes a
+variety of command-line utilities from various third party software
+packages, including GNU coreutils (cat, cp, echo, ls, mv, mkdir, true,
+etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
+Of these, recursive diff's and patch files \cite{HaikuR1A3Src}
+indicate that only coreutils had any sizable modifications.  There,
+most of the changes had to do with adding support for copying file
+meta data known as ``attribututes,'' a special feature of the BFS
+filesystem \cite{BFSWiki}.  The other utilities were either unmodified
+or modified just for porting purposes with the addition of
+preprocessor defines.
 
 \paragraph{Software Packaging}
 Haiku does not include any 3rd party package management systems.  A
