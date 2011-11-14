@@ -59,13 +59,15 @@ The goal for Haiku as far as software availability and installation is ultimatel
 
 \section{Major Package Versions}
 
-Third party packages included the Haiku base via two main mechanisms:
-as forks from the upstream version and as ports using the haiku ports
-framework \cite{HaikuR1A3Src}.  The forks themselves fall into two
-categories, those tracking an upstream version, and those maintained
-by Haiku developers more or less independently.  In some cases the
-package is maintained independently but bits and pieces of newer
-versions of the package have been merged in on a piecemeal basis.
+In this section we will discuss major third party packages included
+Haiku Release 1 Alpha 3.  Third party software is included in the
+Haiku base via two main mechanisms: as forks from the upstream version
+and as ports using the haiku ports framework \cite{HaikuR1A3Src}.  The
+forks themselves fall into two categories, those tracking an upstream
+version, and those maintained by Haiku developers more or less
+independently.  In some cases the package is maintained independently
+but bits and pieces of newer versions of the package have been merged
+in on a piecemeal basis.
 
 The following table summarizes information about the packages we'll be
 discussing in this section.
@@ -173,16 +175,47 @@ relatively few changes, most of which appear to have more to do with
 porting the shell than with modifying it (i.e. preprocessor defines).
 
 \paragraph{Utilities}
-
+XXX
 
 \paragraph{Software Packaging}
+Haiku does not include any 3rd party package management systems.  A
+ports tree and package management system being developed for Haiku are
+described above.
 
 \paragraph{Web Browser}
+Haiku includes the WebKit-based WebPositive as its default web
+browser \cite{WebPositiveWiki}.  Though WebPositive is developed
+specifically for Haiku, it's sources are kept in a separate
+repository \cite{WebPositiveTrac} that includes a fork of the WebKit
+engine.  A recursive diff of the WebPositive WebKit and the WebKit
+revision it's based on results in a more than 25000 line patch,
+indicating heavy modifications to the upstream source.
+
+WebPositive was developed to replace the old Firefox2-based
+BeZillaBrowser \cite{WebPositiveWiki}.  It's unclear why Haiku
+developers chose the WebKit engine as opposed to a newer version of
+the Mozilla engine.  It may be because of WebKit's growing market
+share and its backing by the major corporations Google and Apple.
 
 \paragraph{Email}
+Haiku includes its own e-mail application based on the original open
+sourced BeOS Mail application \cite{BeMailOpenSourced} which, based on
+the LICENSE file, Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The
+Haiku version has been modified to support multiple
+accounts \cite{BeMailOpenSourced}.  This software was included in
+Haiku to help fulfil Haiku's goal of reimplimenting the BeOS
+experience.
 
 \paragraph{Build Tools}
-
+In order to maintain both backwards compatibility with BeOS R5
+applications and permit the porting of modern packages, Haiku includes
+both gcc 2.95.3 and gcc 4.4.4 \cite{GCCHybrids}.  gcc is an essential
+part of Haiku allowing the OS to be self-hosting (build itself) and to
+build third party software packages.  The gcc 4.4.4 in Haiku is
+relatively unmodified.  A recursive diff with the upstream 4.4.4
+produces a 1600 line patch.  Haiku's gcc 2.95.3, however, is very
+heavily modified, producing a 45,000 line patch when compared to its
+upstream source.
 
 \section{Initialization}
 
