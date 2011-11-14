@@ -1,9 +1,9 @@
 must report on:
 -version number
--source (URL of original)
 -how old? how far behind latest stable release?
--how heavily modified?
--why chosen for standard install?
+-source (URL of original)
+-*how heavily modified?
+-*why chosen for standard install?
 
 Haiku Sources:
 http://www.haiku-files.org/files/releases/r1alpha3/sources/
@@ -190,7 +190,7 @@ why chosen?
 grep:
 -----
 version: 2.5.1
-source:
+source: http://ftp.gnu.org/gnu/grep/grep-2.5.1.tar.gz
 how old? how far behind latest stable release?
 -Included version is from March 26th, 2002.  Latest release grep-2.9
  was put out June 21st, 2011.
@@ -232,7 +232,7 @@ why chosen?
 make:
 -----
 version: 3.82
-source: http://ftp.gnu.org/pub/gnu/make/make-3.82.tar.bz2
+source: http://ftp.gnu.org/pub/gnu/make/make-3.82.tar.bz2 
 how old? how far behind latest stable release?
 -this is the latest release from July 28th, 2010
 how heavily modified?
