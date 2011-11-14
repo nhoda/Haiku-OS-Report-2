@@ -51,7 +51,7 @@ During BeOS's life span, an application known as \textit{SoftwareValet} was used
 
 Another source of software for Haiku is what's known as ports. Ports of software already available on other systems can be acquired at \textit{http://ports.haiku-files.org/}. A simple script is available from this website that allows the quick installation of an application known as \textit{HaikuPorter}. This program, once installed, essentially works in much the same way as \texttt{installoptionalpackage} does, by providing a list of available ports, and providing automated download of these ports packages. .BEP (Be Ports) files are used to determine the rules of downloading, building, and installing Ports packages.\cite{BepFiles}
 
-The process of obtaining software through \textit{HaikuPorter} is a simple one. Simply obtain the ports tree using \texttt{haikuporter -g} much like you obtain a list of available packages with something like Ubuntu's aptitude, or even the very simple \texttt{installoptionalpackage} script available in Haiku, list available ports through \texttt{haikuporter -l} and then choose a piece of software from this tree to install with \texttt{haikuporter -i <portname>}. The .BEP file provides information for automating the download, build, and installation procedures.\cite{BepFiles} A major downside to downloading software available in the ports tree is that much of the software is incomplete and incompatible with Haiku at this point in time. \textit{HaikuPorter}, much like \texttt{installoptionalpackage}, is also still not a substitute for a proper package management system. It lacks proper update, registration, and uninstallation functionality commonly associated with more comprehensive package management systems. \textit{HaikuPorter} also lacks the ability to automatically resolve dependencies, simply because its goal isn't to become as powerful as "powerful as Gentoo Portage or the FreeBSD ports system", making this a low priority.\cite{HaikuPorter}
+The process of obtaining software through \textit{HaikuPorter} is a simple one. Simply obtain the ports tree using \texttt{haikuporter -g} much like you obtain a list of available packages with something like Ubuntu's aptitude, or even the very simple \texttt{installoptionalpackage} script available in Haiku, list available ports through \texttt{haikuporter -l} and then choose a piece of software from this tree to install with \texttt{haikuporter -i <portname>}. The .BEP file provides information for automating the download, build, and installation procedures.\cite{BepFiles} A major downside to downloading software available in the ports tree is that much of the software is incomplete and incompatible with Haiku at this point in time. \textit{HaikuPorter}, much like \texttt{installoptionalpackage}, is also still not a substitute for a proper package management system. It lacks proper update, registration, and uninstallation functionality commonly associated with more comprehensive package management systems. \textit{HaikuPorter} also lacks the ability to automatically resolve dependencies, simply because its goal isn't to become as "powerful as Gentoo Portage or the FreeBSD ports system", making this a low priority.\cite{HaikuPorter}
 
 Unfortunately in many cases, the only way to remove software on Haiku is to manually remove the directories and files associated with the application in question. The only alternative to this at this point is if an uninstallation script was provided to automate the process.\cite{AppInstallUninstall}
 
@@ -59,7 +59,7 @@ The goal for Haiku as far as software availability and installation is ultimatel
 
 \section{Major Package Versions}
 
-In this section we will discuss major third party packages included
+In this section we will discuss major third party packages included in
 Haiku Release 1 Alpha 3.  Third party software is included in the
 Haiku base via two main mechanisms: as forks from the upstream version
 and as ports using the haiku ports framework \cite{HaikuR1A3Src}.  The
@@ -90,21 +90,21 @@ GNU sed & No & 4.2.1 (2009-06-27)\footnotemark[6] & 4.2.1 (2009-06-27) \\
 \midrule
 GNU grep & Yes & 2.5.1 (2002-03-26)\footnotemark[7] & 2.9 (2011-06-21) \\
 \midrule
-OpenSSH & No & 5.8p2 (2011-09-06)\footnotemark[8] (2011-05-02) & 5.9p1 \\
+GNU make & No & 3.82 (2010-07-28)\footnotemark[8] & 3.82 (2010-07-28) \\
 \midrule
-p7zip & No & 9.13 (2010-05-30)\footnotemark[9] & 9.20.1 (2011-03-16) \\
+OpenSSH & No & 5.8p2 (2011-05-02)\footnotemark[9]  & 5.9p1 (2011-09-06) \\
 \midrule
-GNU make & No & 3.82 (2010-07-28)\footnotemark[10] & 3.82 (2010-07-28) \\
+p7zip & No & 9.13 (2010-05-30)\footnotemark[10] & 9.20.1 (2011-03-16) \\
 \midrule
 bzip2 & No & 1.0.6 (2010-09-20)\footnotemark[11] & 1.0.6 (2010-09-20) \\
 \midrule
 WebKit & Yes & r57734 (2010-04-09)\footnotemark[12] & r100096 (2011-11-13)\footnotemark[16] \\
 \midrule
-Perforce Jam & Yes & 2.5 (2003-04)\footnotemark[13] & 2.5 (2003-04) \\
+gcc2 & Yes & 2.95.3 (2001-03-16)\footnotemark[13] & 4.6.2 (2011-10-26) \\
 \midrule
-gcc2 & Yes & 2.95.3 (2001-03-16)\footnotemark[14] & 4.6.2 (2011-10-26) \\
+gcc4 & Yes & 4.4.4 (2010-04-29)\footnotemark[14] & 4.6.2 (2011-10-26) \\
 \midrule
-gcc4 & Yes & 4.4.4 (2010-04-29)\footnotemark[15] & 4.6.2 (2011-10-26) \\
+Perforce Jam & Yes & 2.5 (2003-04)\footnotemark[15] & 2.5 (2003-04) \\
 \bottomrul
 \end{tabular}
 
@@ -115,15 +115,15 @@ gcc4 & Yes & 4.4.4 (2010-04-29)\footnotemark[15] & 4.6.2 (2011-10-26) \\
 \footnotetext[5]{\url{http://ftp.gnu.org/gnu/tar/tar-1.25.tar.bz2}}
 \footnotetext[6]{\url{http://ftp.gnu.org/gnu/sed/sed-4.2.1.tar.gz}}
 \footnotetext[7]{\url{http://ftp.gnu.org/gnu/grep/grep-2.5.1.tar.gz}}
-\footnotetext[8]{\url{http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-5.8p2.tar.gz}}
-\footnotetext[9]{\url{http://downloads.sourceforge.net/project/p7zip/p7zip/9.13/p7zip_9.13_src_all.tar.bz2}}
-\footnotetext[10]{\url{http://ftp.gnu.org/pub/gnu/make/make-3.82.tar.bz2}}
+\footnotetext[8]{\url{http://ftp.gnu.org/pub/gnu/make/make-3.82.tar.bz2}}
+\footnotetext[9]{\url{http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-5.8p2.tar.gz}}
+\footnotetext[10]{\url{http://downloads.sourceforge.net/project/p7zip/p7zip/9.13/p7zip_9.13_src_all.tar.bz2}}
 \footnotetext[11]{\url{http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz}}
 \footnotetext[12]{\texttt{svn checkout} \url{http://svn.webkit.org/repository/webkit/trunk@r57734} \texttt{WebKit}}
-\footnotetext[13]{\url{ftp://ftp.perforce.com/jam/src}}
-\footnotetext[14]{\url{ftp://ftp.gnu.org/gnu/gcc/gcc-2.95.3/}}
-\footnotetext[15]{\url{ftp://ftp.gnu.org/gnu/gcc/gcc-4.4.4/}}
-\footnotetext[16]{This is a snapshot or revision number since this software package does not issue stable releases}
+\footnotetext[13]{\url{ftp://ftp.gnu.org/gnu/gcc/gcc-2.95.3/}}
+\footnotetext[14]{\url{ftp://ftp.gnu.org/gnu/gcc/gcc-4.4.4/}}
+\footnotetext[15]{\url{ftp://ftp.perforce.com/jam/src}}
+\footnotetext[16]{This is a snapshot or revision number since this software package does not issue stable releases.}
 
 
 \paragraph{Kernel}
@@ -133,10 +133,10 @@ for the copyright notices in the Haiku kernel sources suggests the
 fork was made sometime in 2002, though the exact source is difficult
 to determine, especially since NewOS never made any regular releases.
 
-The most recent NewOS snapshots were released in 2005, however, the
+The most recent NewOS snapshots were released in 2005.  However, the
 Haiku commit logs don't indicate any merging of NewOS sources into the
-Haiku repositories since then but rather indicate significant local
-modifications \cite{HaikuKernelCommitLogs}.
+Haiku repositories since the original fork in 2002 but rather indicate
+significant local modifications \cite{HaikuKernelCommitLogs}.
 
 It's difficult to say why exactly this kernel was chosen for the
 project.  A review of the Haiku developer mailing lists didn't yield
@@ -148,16 +148,14 @@ NewOS.
 \paragraph{C Library}
 Haiku includes a fork of the GNU C Library in its libroot library, as
 did BeOS \cite{GlibCWiki}.  It appears from the commit logs that much
-of the 2.2.5 version of glibc was imported into the Haiku
-fork \cite{HaikuLibrootGlibcOld} but that parts of the 2.3.x versions
-were also brought in on a piecemeal
-basis \cite{HaikuLibrootGlibcRecent} so it's difficult to specify
-exactly which upstream version Haiku's glibc is derived from.  The
-logs also indicate much local modification of glibc.
-
-Of course, a C library was necessary for Haiku to reimpliment the BeOS
-API.  The GNU libc was most likely chosen over a BSD libc because BeOS
-itself included GNU libc \cite{GlibCWiki}.
+of the 2.2.5 version of glibc was imported into the Haiku fork
+\cite{HaikuLibrootGlibcOld} but that parts of the 2.3.x versions were
+also brought in on a piecemeal basis \cite{HaikuLibrootGlibcRecent} so
+it's difficult to specify exactly which upstream version Haiku's glibc
+is derived from.  The logs also indicate much local modification of
+glibc.  Of course, a C library was necessary for Haiku to reimpliment
+the BeOS API.  The GNU libc was most likely chosen over a BSD libc
+because BeOS itself included GNU libc \cite{GlibCWiki}.
 
 \paragraph{GUI Foundation}
 Haiku provides its own GUI Foundation in \texttt{app\_server} and so
@@ -179,13 +177,13 @@ In order to support the command-line environment, Haiku includes a
 variety of command-line utilities from various third party software
 packages, including GNU coreutils (cat, cp, echo, ls, mv, mkdir, true,
 etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
-Of these, recursive diff's and patch files \cite{HaikuR1A3Src}
-indicate that only coreutils had any sizable modifications.  There,
-most of the changes had to do with adding support for copying file
-meta data known as ``attribututes,'' a special feature of the BFS
-filesystem \cite{BFSWiki}.  The other utilities were either unmodified
-or modified just for porting purposes with the addition of
-preprocessor defines.
+Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
+that only coreutils had any sizable modifications.  There, most of the
+changes had to do with adding support for copying file meta data known
+as ``attribututes,'' a special feature of the BFS filesystem
+\cite{BFSWiki}.  The other utilities were either unmodified or
+modified just for porting purposes with the addition of preprocessor
+defines.
 
 \paragraph{Software Packaging}
 Haiku does not include any 3rd party package management systems.  A
@@ -193,13 +191,13 @@ ports tree and package management system being developed for Haiku are
 described above.
 
 \paragraph{Web Browser}
-Haiku includes the WebKit-based WebPositive as its default web
-browser \cite{WebPositiveWiki}.  Though WebPositive is developed
-specifically for Haiku, it's sources are kept in a separate
-repository \cite{WebPositiveTrac} that includes a fork of the WebKit
-engine.  A recursive diff of the WebPositive WebKit and the WebKit
-revision it's based on results in a more than 25000 line patch,
-indicating heavy modifications to the upstream source.
+Haiku includes the WebKit-based WebPositive as its default web browser
+\cite{WebPositiveWiki}.  Though WebPositive is developed specifically
+for Haiku, it's sources are kept in a separate repository
+\cite{WebPositiveTrac} that includes a fork of the WebKit engine.  A
+recursive diff of the WebPositive WebKit and the WebKit revision it's
+based on results in a more than 25,000 line patch, indicating heavy
+modifications to the upstream source.
 
 WebPositive was developed to replace the old Firefox2-based
 BeZillaBrowser \cite{WebPositiveWiki}.  It's unclear why Haiku
@@ -209,12 +207,11 @@ share and its backing by the major corporations Google and Apple.
 
 \paragraph{Email}
 Haiku includes its own e-mail application based on the original open
-sourced BeOS Mail application \cite{BeMailOpenSourced} which, based on
-the LICENSE file, Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The
-Haiku version has been modified to support multiple
-accounts \cite{BeMailOpenSourced}.  This software was included in
-Haiku to help fulfil Haiku's goal of reimplimenting the BeOS
-experience.
+sourced BeOS Mail application \cite{BeMailOpenSourced} which it
+appears Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The Haiku
+version has been modified to support multiple accounts
+\cite{BeMailOpenSourced}.  This software was included in Haiku to help
+fulfil Haiku's goal of reimplimenting the BeOS experience.
 
 \paragraph{Build Tools}
 In order to maintain both backwards compatibility with BeOS R5
@@ -222,10 +219,20 @@ applications and permit the porting of modern packages, Haiku includes
 both gcc 2.95.3 and gcc 4.4.4 \cite{GCCHybrids}.  gcc is an essential
 part of Haiku allowing the OS to be self-hosting (build itself) and to
 build third party software packages.  The gcc 4.4.4 in Haiku is
-relatively unmodified.  A recursive diff with the upstream 4.4.4
-produces a 1600 line patch.  Haiku's gcc 2.95.3, however, is very
-heavily modified, producing a 45,000 line patch when compared to its
-upstream source.
+relatively unmodified: a recursive diff with the upstream 4.4.4
+produces only a 1,600 line patch.  Haiku's gcc 2.95.3, however, is
+very heavily modified, producing a 45,000 line patch when compared to
+its upstream source.
+
+Another integral part of the Haiku build system is a make-like
+dependency-based build framework called Jam.  The Haiku developers
+maintain their own modified fork of Jam based on the upstream version
+2.5 \cite{UsingJam}.  The Haiku modifications produce an approximately
+5000 line patch relative to the upstream version, where most of the
+differences involve build optimizations.  Specifically, these
+optimizations cache header file information and file metadata
+(e.g. modification time), improving build times for the large Haiku
+source tree.
 
 \section{Initialization}
 
